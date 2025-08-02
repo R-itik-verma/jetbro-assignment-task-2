@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "student-onboarding-api",
+		"name": "Student Onboarding API",
+		"description": "Complete API collection for student onboarding functionality",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Student Onboarding",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"date_of_birth\": \"2005-06-15\",\n    \"gender\": \"M\",\n    \"email\": \"john.doe@example.com\",\n    \"mobile_number\": \"+1234567890\",\n    \"address_line_1\": \"123 Main St\",\n    \"city\": \"New York\",\n    \"state\": \"NY\",\n    \"country\": \"United States\",\n    \"zipcode\": \"10001\",\n    \"citizenship\": \"US\",\n    \"guardian_name\": \"Jane Doe\",\n    \"guardian_relationship\": \"Mother\",\n    \"guardian_phone\": \"+1234567891\",\n    \"guardian_email\": \"jane.doe@example.com\",\n    \"father_name\": \"Robert Doe\",\n    \"father_profession\": \"engineer\",\n    \"mother_name\": \"Jane Doe\",\n    \"mother_profession\": \"teacher\",\n    \"family_income\": \"75000.00\",\n    \"number_of_siblings\": 2,\n    \"has_family_abroad\": false\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/student-onboarding/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"student-onboarding",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/student-onboarding/1/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"student-onboarding",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mobile_number\": \"+1234567899\",\n    \"family_income\": \"80000.00\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/student-onboarding/1/update/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"student-onboarding",
+						"1",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Dropdown Options",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/dropdown-options/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"dropdown-options",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+} 
